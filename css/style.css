@@ -1,0 +1,480 @@
+:root {
+  --main-color: #b11010;
+}
+
+/* -------------------------------- 
+Primary style
+-------------------------------- */
+html * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 100%;
+  font-family: "Montserrat", sans-serif;
+  color: #31353d;
+  background-color: #eeeff7;
+}
+body.overflow-hidden {
+  /* prevent 2 vertical scrollbars on ie and firefox when the cart is visible */
+  overflow: hidden;
+}
+
+a {
+  color: #794343;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* -------------------------------- 
+  Modules - reusable parts of our design
+  -------------------------------- */
+.cd-container {
+  /* this class is used to horizontally align the gallery of items */
+  position: relative;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.cd-container::after {
+  /* clearfix */
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.cd-img-replace {
+  /* replace text with a background-image */
+  display: inline-block;
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+}
+
+/* -------------------------------- 
+  xheader 
+  -------------------------------- */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 50px;
+  width: 100%;
+  background: #000205;
+  text-align: center;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
+  z-index: 4;
+}
+.logo {
+  color: #fff;
+  font-size: 24px;
+  height: 50px;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  font-weight: 400;
+}
+#logo {
+  /* delete this property if you don't want your logo to scale down on mobile devices */
+  -webkit-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  -o-transform: scale(0.8);
+  transform: scale(0.8);
+}
+
+@media only screen and (min-width: 1200px) {
+  header {
+    height: 60px;
+  }
+  .logo {
+    color: #fff;
+    font-size: 24px;
+    height: 60px;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    font-weight: 400;
+  }
+  #logo {
+    /* delete this property if you don't want your logo to scale down on mobile devices */
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    -o-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #logo {
+    position: absolute;
+    /* logo left margin on Dekstop */
+    left: 2.4em;
+    top: 0;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+#cd-hamburger-menu,
+#cd-cart-trigger {
+  position: absolute;
+  top: 0;
+  height: 100%;
+}
+#cd-hamburger-menu a,
+#cd-cart-trigger a {
+  width: 60px;
+  height: 100%;
+}
+
+#cd-hamburger-menu {
+  left: 0;
+}
+#cd-hamburger-menu a {
+  background: #000102 url("../img/cd-menu.svg") no-repeat center center;
+}
+@media only screen and (min-width: 1200px) {
+  #cd-hamburger-menu {
+    display: none;
+  }
+}
+
+#cd-cart-trigger {
+  right: 0;
+}
+#cd-cart-trigger a {
+  background: #000000 url("../img/cd-youtube.svg") no-repeat center center;
+}
+@media only screen and (min-width: 1200px) {
+  #cd-cart-trigger {
+    /* cart right margin on desktop */
+    right: 0;
+  }
+  #cd-cart-trigger a {
+    position: relative;
+    width: 100px;
+    border-left: none;
+    background-color: #000000;
+  }
+}
+
+#main-nav,
+#cd-cart {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 260px;
+  /* header height */
+  padding-top: 50px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  z-index: 3;
+}
+
+#main-nav {
+  left: -100%;
+  background: #fff;
+  -webkit-transition: left 0.3s;
+  -moz-transition: left 0.3s;
+  transition: left 0.3s;
+}
+#main-nav.speed-in {
+  left: 0;
+}
+#main-nav ul a {
+  display: block;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 1em;
+  border-bottom: 1px solid #e0e6ef;
+}
+#main-nav ul .current {
+  box-shadow: inset 3px 0 var(--main-color);
+}
+
+@media only screen and (min-width: 1200px) {
+  #main-nav {
+    /* reset main nav style */
+    position: absolute;
+    height: auto;
+    width: auto;
+    left: auto;
+    right: 8em;
+    padding-top: 0;
+    top: 0;
+    background: transparent;
+    box-shadow: none;
+    /* header height */
+    line-height: 60px;
+    z-index: 4;
+  }
+  #main-nav ul {
+    margin: 0;
+  }
+  #main-nav li {
+    display: inline-block;
+    margin-left: 1em;
+    margin: 0;
+  }
+  #main-nav ul a {
+    display: inline-block;
+    height: auto;
+    line-height: 0.5;
+    padding: 1em 1.4em;
+    border-bottom: none;
+    color: rgba(255, 255, 255, 0.8);
+    border-radius: 0em;
+  }
+  #main-nav ul a.current {
+    box-shadow: none;
+    border: 0.5px solid var(--main-color);
+    color: #fff;
+  }
+  .no-touch #main-nav ul a:hover {
+    box-shadow: none;
+    background: #0e0e0e;
+    color: #fff;
+  }
+}
+.no-js #main-nav {
+  position: fixed;
+}
+
+/* -------------------------------- 
+  xgallery 
+  -------------------------------- */
+
+#cd-shadow-layer {
+  position: fixed;
+  min-height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(19, 17, 17, 0.6);
+  cursor: pointer;
+  z-index: 2;
+  display: none;
+}
+#cd-shadow-layer.is-visible {
+  display: block;
+  -webkit-animation: cd-fade-in 0.3s;
+  -moz-animation: cd-fade-in 0.3s;
+  animation: cd-fade-in 0.3s;
+}
+
+/* -------------------------------- 
+  MAIN
+  -------------------------------- */
+main {
+  background-image: url("../img/wallpaper.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  height: 70vh;
+}
+.welcome {
+  margin: auto;
+  color: #fff;
+  width: 100%;
+  padding: 25vh 10vw;
+}
+
+.welcome h1 {
+  font-size: 60px;
+  padding-bottom: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 70px;
+  text-align: left;
+}
+.welcome h4 {
+  font-size: 1.5em;
+  text-align: left;
+  font-weight: 500;
+  color: #fff;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 50px #000;
+}
+.image-tec {
+  padding-top: 100px;
+  margin: auto;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 70%;
+  height: 100%;
+}
+
+/* -------------------------------- 
+  Courses
+  -------------------------------- */
+section .container {
+  margin: auto;
+  width: 80vw;
+}
+.container h3 {
+  text-align: center;
+  padding: 40px 0px;
+  font-size: 30px;
+}
+.curses {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding-bottom: 20px;
+  grid-gap: 20px;
+}
+.card {
+  border: 0.5px solid rgb(214, 214, 214);
+  text-align: center;
+  border-radius: 6px;
+}
+.card img {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+.card h4 {
+  font-size: 15px;
+  padding: 25px;
+}
+.btn-courses {
+  width: 100%;
+  padding: 20px;
+  display: grid;
+  justify-items: center;
+}
+.btn-courses button {
+  background-color: rgb(37, 34, 34);
+  color: #fff;
+  border: #000;
+  padding: 15px;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+/* -------------------------------- 
+ MiniInfo
+  -------------------------------- */
+.mini-info {
+  margin: auto;
+  width: 80%;
+  height: 80vh;
+  display: grid;
+  grid-template-columns: 4fr 2fr;
+  align-items: center;
+  justify-items: center;
+}
+.paragraph {
+  padding: 20px;
+  line-height: 30px;
+}
+.paragraph h2 {
+  font-size: 25px;
+  padding-bottom: 10px;
+}
+.paragraph p {
+  padding: 10px;
+}
+/* -------------------------------- 
+  Counter
+  -------------------------------- */
+
+.counter{
+  background-image: url('../img/Home-Recording-Must-Haves.jpeg');
+  box-shadow: inset 15px 15px 90px rgba(0, 0, 0, 0.566);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 50% 50%;
+  width: 100%;
+  height: 64vh;
+  color: #fff;
+  display: grid;
+  justify-items: center;
+}
+.counter img{
+  padding-top: 60px;
+  width: 80px;
+}
+.counter-info{
+  width: 80%;
+  height: 20vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+}
+.counter-info h3{
+  font-size: 45px;
+  padding: 10px;
+  font-weight: 700;
+}
+.counter-info h4{
+  font-size: 18px;
+  font-weight: 500;
+}
+
+
+
+
+/* -------------------------------- 
+ Footer
+  -------------------------------- */
+
+footer {
+  width: 100%;
+  height: 30vh;
+  background-color: #000;
+  font-size: 15px;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  color: #fff;
+}
+
+/* -------------------------------- 
+  xkeyframes 
+  -------------------------------- */
+@-webkit-keyframes cd-fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes cd-fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes cd-fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
