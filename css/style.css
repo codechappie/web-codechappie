@@ -45,7 +45,7 @@ img {
   /* this class is used to horizontally align the gallery of items */
   position: relative;
   width: 90%;
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 .cd-container::after {
@@ -72,7 +72,7 @@ header {
   left: 0;
   height: 50px;
   width: 100%;
-  background: #000205;
+  background: #000;
   text-align: center;
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
   z-index: 4;
@@ -95,7 +95,7 @@ header {
   transform: scale(0.8);
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1000px) {
   header {
     height: 60px;
   }
@@ -117,7 +117,7 @@ header {
     transform: scale(0.8);
   }
 }
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1000px) {
   #logo {
     position: absolute;
     /* logo left margin on Dekstop */
@@ -149,7 +149,7 @@ header {
 #cd-hamburger-menu a {
   background: #000102 url("../img/cd-menu.svg") no-repeat center center;
 }
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1000px) {
   #cd-hamburger-menu {
     display: none;
   }
@@ -161,7 +161,7 @@ header {
 #cd-cart-trigger a {
   background: #000000 url("../img/cd-youtube.svg") no-repeat center center;
 }
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1000px) {
   #cd-cart-trigger {
     /* cart right margin on desktop */
     right: 0;
@@ -189,6 +189,7 @@ header {
 }
 
 #main-nav {
+  position: fixed;
   left: -100%;
   background: #fff;
   -webkit-transition: left 0.3s;
@@ -207,12 +208,13 @@ header {
 }
 #main-nav ul .current {
   box-shadow: inset 3px 0 var(--main-color);
+  position: fixed;
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1000px) {
   #main-nav {
     /* reset main nav style */
-    position: absolute;
+    position: fixed;
     height: auto;
     width: auto;
     left: auto;
@@ -335,7 +337,7 @@ section .container {
 }
 .curses {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   padding-bottom: 20px;
   grid-gap: 20px;
 }
@@ -354,7 +356,6 @@ section .container {
 }
 .btn-courses {
   width: 100%;
-  padding: 20px;
   display: grid;
   justify-items: center;
 }
@@ -362,10 +363,12 @@ section .container {
   background-color: rgb(37, 34, 34);
   color: #fff;
   border: #000;
-  padding: 15px;
+  padding: 15px 35px;
   border-radius: 4px;
   font-size: 15px;
   font-weight: 400;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
 }
 
 /* -------------------------------- 
@@ -405,11 +408,12 @@ section .container {
   height: 64vh;
   color: #fff;
   display: grid;
+  grid-template-rows: 1fr 1.5fr;
   justify-items: center;
 }
 .counter img{
-  padding-top: 60px;
-  width: 80px;
+  padding-top: 90px;
+  width: 50px;
 }
 .counter-info{
   width: 80%;
@@ -424,6 +428,7 @@ section .container {
   font-size: 45px;
   padding: 10px;
   font-weight: 700;
+  text-shadow: rgb(22, 22, 22) 5px 5px 15px;
 }
 .counter-info h4{
   font-size: 18px;
@@ -447,6 +452,340 @@ footer {
   align-items: center;
   color: #fff;
 }
+.socialnet{
+  padding-top: 20px;
+  text-align: center;
+}
+.socialnet img{
+  width: 12%;
+  padding: 10px;
+}
+/* -------------------------------- 
+  Media Queries
+  Main
+  -------------------------------- */
+  @media screen and (max-width: 1024px) {
+    .welcome {
+      padding: 24vh 10vw;
+    }
+    
+    .welcome h1 {
+      font-size: 50px;
+      line-height: 60px;
+    }        
+  }
+  /* -------------------------------- 
+  Media Queries
+  Courses
+  -------------------------------- */
+  @media screen and (max-width: 1024px) {
+    section .container {
+      margin: auto;
+      width: 80vw;
+    }
+    .container h3 {
+      text-align: center;
+      padding: 40px 0px;
+      font-size: 30px;
+    }
+    .curses {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      padding-bottom: 20px;
+      grid-gap: 20px;
+    }
+    .card {
+      border: 0.5px solid rgb(214, 214, 214);
+      text-align: center;
+      border-radius: 6px;
+    }
+    .card img {
+      border-top-left-radius: 6px;
+      border-top-right-radius: 6px;
+    }
+    .card h4 {
+      font-size: 15px;
+      padding: 25px;
+    }
+    .btn-courses {
+      width: 100%;
+      padding: 20px;
+      display: grid;
+      justify-items: center;
+    }
+    .btn-courses button {
+      background-color: rgb(37, 34, 34);
+      color: #fff;
+      border: #000;
+      padding: 15px;
+      border-radius: 4px;
+      font-size: 15px;
+      font-weight: 400;
+    }
+    
+  }
+  
+/* -------------------------------- 
+  Media Queries
+  Main v2
+  -------------------------------- */
+  @media screen and (max-width: 785px) {
+    .welcome h1 {
+      font-size: 40px;
+      line-height: 60px;
+    }
+    .welcome h4{
+      font-size: 20px;
+    }     
+  }
+  /* -------------------------------- 
+  Media Queries
+  Courses
+  -------------------------------- */
+  @media screen and (max-width: 785px) {
+    .curses {
+      grid-template-columns: 1fr 1fr;
+    }
+    .card h4 {
+      font-size: 13px;
+      padding: 15px;
+    }
+    .btn-courses {
+      width: 100%;
+      padding: 20px;
+      display: grid;
+      justify-items: center;
+    }
+    .btn-courses button {
+      background-color: rgb(37, 34, 34);
+      color: #fff;
+      border: #000;
+      padding: 15px 40px;
+      border-radius: 4px;
+      font-size: 15px;
+      font-weight: 400;
+    }
+    
+  }
+/* -------------------------------- 
+ MiniInfo
+  -------------------------------- */
+  @media screen and (max-width: 785px) {
+    .mini-info {
+      margin: auto;
+      width: 80%;
+      height: 100%;
+      display: grid;
+      grid-template-columns: 1fr;
+      align-items: center;
+      justify-items: center;
+      padding-bottom: 30px;
+    }
+    .paragraph {
+      grid-row: 2/3;
+      padding: 20px;
+      line-height: 30px;
+      text-align: center;
+    }
+    .paragraph h2 {
+      font-size: 25px;
+      padding-bottom: 10px;
+    }
+    .paragraph p {
+      padding: 10px;
+      text-align: justify;
+    }
+    .mini-info .image{
+      width: 50%;
+      padding-top: 90px;
+    }
+  }
+  /* -------------------------------- 
+ Counter
+  -------------------------------- */
+  @media screen and (max-width: 785px) {
+   
+.counter{
+  width: 100%;
+  height: 100vh;
+  color: #fff;
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+  justify-items: center;
+}
+.counter img{
+  padding-top: 40px;
+  width: 50px;
+}
+.counter-info{
+  width: 80%;
+  height: 80vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 20px;
+}
+.counter-info > div{
+  width: 30vw;
+  border-bottom: 2px solid rgb(255, 255, 255);
+  padding-bottom: 10px;
+}
+.counter-info h3{
+  font-size: 40px;
+  font-weight: 700;
+  text-shadow: rgb(22, 22, 22) 5px 5px 15px;
+}
+.counter-info h4{
+  font-size: 18px;
+  font-weight: 500;
+} 
+  }
+
+
+/* -------------------------------- 
+  Media Queries
+  Main v333333
+  -------------------------------- */
+  @media screen and (max-width: 630px) {
+    .welcome h1 {
+      font-size: 35px;
+      line-height: 50px;
+    }
+    .welcome h4{
+      font-size: 20px;
+    }     
+  }
+  /* -------------------------------- 
+  Media Queries
+  Courses
+  -------------------------------- */
+  @media screen and (max-width: 630px) {
+    .curses {
+      grid-template-columns: 1fr;
+    }
+    .card h4 {
+      font-size: 18px;
+      padding: 15px;
+    }
+    
+  }
+
+  /* -------------------------------- 
+ Counter
+  -------------------------------- */
+  @media screen and (max-width: 630px) {
+  
+.counter-info h3{
+  font-size: 30px;
+  font-weight: 700;
+  text-shadow: rgb(22, 22, 22) 5px 5px 15px;
+}
+.counter-info h4{
+  font-size: 18px;
+  font-weight: 500;
+} 
+  }
+
+
+
+
+
+
+
+
+/* -------------------------------- 
+  Media Queries
+  Main v4444
+  -------------------------------- */
+  @media screen and (max-width: 550px) {
+    .welcome{
+      padding-left: 5vw;
+    }
+    .welcome h1 {
+      font-size: 30px;
+      line-height: 40px;
+    }
+    .welcome h4{
+      font-size: 15px;
+    }     
+  }
+
+/* -------------------------------- 
+ MiniInfo
+  -------------------------------- */
+  @media screen and (max-width: 550px) {
+    .mini-info {
+      margin: auto;
+      width: 100%;
+      height: 100%;
+      display: grid;
+      grid-template-columns: 1fr;
+      align-items: center;
+      justify-items: center;
+      padding-bottom: 30px;
+    }
+    .paragraph {
+      grid-row: 2/3;
+      padding: 20px;
+      line-height: 30px;
+      text-align: center;
+    }
+    .paragraph h2 {
+      font-size: 25px;
+      padding-bottom: 10px;
+    }
+    .paragraph p {
+      padding: 10px;
+      text-align: justify;
+    }
+    .mini-info .image{
+      width: 50%;
+      padding-top: 90px;
+    }
+  }
+  /* -------------------------------- 
+ Counter
+  -------------------------------- */
+  @media screen and (max-width: 550px) {
+  
+.counter-info h3{
+  font-size: 20px;
+  font-weight: 700;
+  text-shadow: rgb(22, 22, 22) 5px 5px 15px;
+}
+.counter-info h4{
+  font-size: 14px;
+  font-weight: 500;
+} 
+  }
+
+
+/* -------------------------------- 
+ Counter
+  -------------------------------- */
+  @media screen and (max-width: 550px) {
+    footer{
+      width: 100vw;
+      justify-items: center;
+    }
+    .copyright{
+      width: 80vw;
+      text-align: center;
+      font-size: 12px;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
 
 /* -------------------------------- 
   xkeyframes 
