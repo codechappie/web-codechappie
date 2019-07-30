@@ -62,10 +62,19 @@ img {
   text-indent: 100%;
   white-space: nowrap;
 }
-
+::-webkit-scrollbar {
+  background-color: rgb(0, 0, 0);
+  width: 5px;
+}
+::-webkit-scrollbar-thumb  {
+  background-color: rgb(49, 49, 49);
+}
 /* -------------------------------- 
   xheader 
   -------------------------------- */
+  .logo-navbar{
+    width: 200px;
+  }
 header {
   position: fixed;
   top: 0;
@@ -78,8 +87,6 @@ header {
   z-index: 4;
 }
 .logo {
-  color: #fff;
-  font-size: 24px;
   height: 50px;
   display: grid;
   justify-items: center;
@@ -763,7 +770,7 @@ footer {
 
 
 /* -------------------------------- 
- Counter
+ Footer
   -------------------------------- */
   @media screen and (max-width: 550px) {
     footer{
@@ -777,10 +784,141 @@ footer {
     }
   }
 
+/* -------------------------------- 
+ Landscape
+  -------------------------------- */
+  @media (max-height: 460px), screen and (orientation: portrait) {    
+    .mini-info {
+      margin: auto;
+      width: 80%;
+      height: 100%;
+      display: grid;
+      grid-template-columns: 1fr;
+      align-items: center;
+      justify-items: center;
+      padding-bottom: 30px;
+    }
+    .paragraph {
+      grid-row: 2/3;
+      padding: 20px;
+      line-height: 30px;
+      text-align: center;
+    }
+    .paragraph h2 {
+      font-size: 25px;
+      padding-bottom: 10px;
+    }
+    .paragraph p {
+      padding: 10px;
+      text-align: justify;
+    }
+    .mini-info .image{
+      width: 50%;
+      padding-top: 90px;
+    }
+
+
+
+    .counter{
+      background-image: url('../img/Home-Recording-Must-Haves.jpeg');
+      box-shadow: inset 15px 15px 90px rgba(0, 0, 0, 0.566);
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: 50% 50%;
+      width: 100%;
+      height: 60vh;
+      color: #fff;
+      display: grid;
+      grid-template-rows: 1fr 1.5fr;
+      justify-items: center;
+    }
+    .counter img{
+      padding-top: 40px;
+      width: 50px;
+    }
+    .counter-info{
+      width: 90%;
+      height: 20vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      justify-items: center;
+      align-items: center;
+      text-align: center;
+    }
+    .counter-info h3{
+      font-size: 25px;
+      padding: 10px;
+      font-weight: 700;
+      text-shadow: rgb(22, 22, 22) 5px 5px 15px;
+    }
+    .counter-info h4{
+      font-size: 12px;
+      font-weight: 500;
+    }
+    footer{
+      width: 100%;
+      height: 40vh;
+      justify-items: center;
+    }
+    .copyright{
+      width: 80vw;
+      text-align: center;
+      font-size: 12px;
+    }
+  }
 
 
 
 
+
+
+
+/*------------------------
+  
+------------------------*/
+
+  @media screen and (max-width: 500px) {
+    
+    .counter{
+      width: 100%;
+      height: 80vh;
+      color: #fff;
+      display: grid;
+      grid-template-rows: 1fr 1fr 1fr;
+      justify-items: center;
+      align-items: center;
+    }
+    .counter img{
+      padding-top: 60px;
+      width: 50px;
+    }
+    .counter-info{
+      width: 80%;
+      height: 60vh;
+      display: grid;
+      grid-template-columns: 1fr;
+      justify-items: center;
+      align-items: center;
+      text-align: center;
+      padding-bottom: 20px;
+    }
+    .counter-info > div{
+      width: 45vw;
+      border-bottom: 2px solid rgb(255, 255, 255);
+      padding-bottom: 10px;
+    }
+    .counter-info h3{
+      font-size: 30px;
+      font-weight: 700;
+      text-shadow: rgb(22, 22, 22) 5px 5px 15px;
+    }
+    .counter-info h4{
+      font-size: 18px;
+      font-weight: 500;
+    } 
+      }
+    
+    
 
 
 

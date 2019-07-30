@@ -71,4 +71,7 @@ function move_navigation( $navigation, $MQ) {
 		$navigation.detach();
 		$navigation.insertAfter('header');
 	}
+
+
 }
+
