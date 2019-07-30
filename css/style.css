@@ -477,15 +477,16 @@ footer {
 
 .blog-container{
   margin: 60px auto;
-  width: 100vw;
+  width: 100%;
 }
 .blog-container h3{
   text-align: center;
-  padding: 20px;
   font-size: 20px;
+  font-weight: 600;
+  padding: 10px;
 }
 .blog{
-  width: 100vw;
+  width: 100%;
   height: 100%;
 }
 .article{
@@ -509,6 +510,7 @@ footer {
 .article .info-article h2 a{
   font-size: 26px;
   padding-bottom: 6px;
+  font-weight: 600;
   color: #31353d;
 }
 .article .info-article h6 a:hover,
@@ -516,9 +518,9 @@ footer {
   text-decoration: underline;
   transition: all 700ms ease-in-out;
 }
-.article .info-article h2:visited{
- color: #31353d;
-}
+.article .info-article h2 a:visited{
+  color: #7e7e7e;
+ }
 .article .info-article p{
   font-size: 15px;
   line-height: 20px;
@@ -615,7 +617,59 @@ footer {
     }
     
   }
-  
+  @media screen and (max-width: 1024px){
+    /*
+
+----- Blog-container ------
+
+*/
+
+.blog-container{
+  margin: 60px auto;
+  width: 100vw;
+}
+.article{
+  width: 90vw;
+  height: 200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 3fr 5fr;
+
+}
+.article .info-article{
+  width: 100%;
+  padding: 20px 20px;
+  margin: 0px auto;
+  color: #31353d;
+} 
+.article .info-article a{
+  color: #31353d;
+  width: 100%;
+} 
+.article .info-article h2 a{
+  font-size: 24px;
+  width: 100%;
+  font-weight: 600;
+  padding-bottom: 6px;
+  color: #31353d;
+}
+.article .info-article h6 a:hover,
+.article .info-article h2 a:hover{
+  text-decoration: underline;
+  transition: all 700ms ease-in-out;
+}
+.article .info-article h2 a:visited{
+ color: #7e7e7e;
+}
+.article .info-article h4{
+  font-size: 15px;
+  line-height: 30px;
+  color: rgb(78, 75, 75);
+}
+
+
+  }
+
 /* -------------------------------- 
   Media Queries
   Main v2
@@ -691,10 +745,26 @@ footer {
       padding-top: 90px;
     }
   }
+/*BLOG PREFIX*/
+@media screen and (max-width: 700px){
+      /*
+
+----- Blog-container ------
+
+*/
+.article{
+  width: 95vw;
+  height: 100%;
+  margin: 20px auto;
+  display: grid;
+}
+}
+
+
   /* -------------------------------- 
  Counter
   -------------------------------- */
-  @media screen and (max-width: 785px) {
+  @media screen and (max-width: 605px) {
    
 .counter{
   width: 100%;
@@ -732,6 +802,70 @@ footer {
   font-size: 18px;
   font-weight: 500;
 } 
+    /*
+
+----- Blog-container ------
+
+*/
+
+.blog-container{
+  margin: 60px auto;
+  width: 100vw;
+}
+.blog-container h3{
+  padding: 0px;
+}
+.article{
+  width: 100vw;
+  height: 100%;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 4fr 1fr;
+
+}
+.article .img{
+  width: 90vw;
+  max-height: auto;
+  margin: 10px auto;
+}
+.article img{
+  width: 100%;
+  max-height: auto;
+}
+.article .info-article{
+  width: 100%;
+  max-height: 100px;
+  padding: 0px 20px;
+  margin: -20px auto;
+  color: #31353d;
+} 
+.article .info-article a{
+  color: #31353d;
+  width: 100%;
+} 
+.article .info-article h2 a{
+  font-size: 20px;
+  width: 100%;
+  font-weight: 600;
+  padding-bottom: 6px;
+  color: #31353d;
+}
+.article .info-article h6 a:hover,
+.article .info-article h2 a:hover{
+  text-decoration: underline;
+  transition: all 700ms ease-in-out;
+}
+.article .info-article h2 a:visited{
+ color: #7e7e7e;
+}
+.article .info-article h4{
+  font-size: 15px;
+  line-height: 30px;
+  color: rgb(78, 75, 75);
+}
+
+
   }
 
 
@@ -1003,6 +1137,79 @@ footer {
       }
     
     
+
+
+
+@media screen and (max-width: 450px) {
+
+    /*
+
+----- Blog-container ------
+
+*/
+
+.blog-container{
+  margin: 60px auto;
+  width: 100vw;
+}
+.blog-container h3{
+  padding: 0px;
+}
+.article{
+  width: 100vw;
+  height: 100%;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 4fr 1fr;
+
+}
+.article .img{
+  width: 90vw;
+  max-height: auto;
+  margin: 10px auto;
+}
+.article img{
+  width: 100%;
+  max-height: auto;
+}
+.article .info-article{
+  width: 100%;
+  max-height: 100px;
+  padding: 0px 20px;
+  margin: -20px auto;
+  color: #31353d;
+} 
+.article .info-article a{
+  color: #31353d;
+  width: 100%;
+} 
+.article .info-article .tags{
+  font-size: 11px;
+}
+.article .info-article h2 a{
+  font-size: 15px;
+  width: 100%;
+  font-weight: 600;
+  padding-bottom: 6px;
+  color: #31353d;
+}
+.article .info-article h6 a:hover,
+.article .info-article h2 a:hover{
+  text-decoration: underline;
+  transition: all 700ms ease-in-out;
+}
+.article .info-article h2 a:visited{
+ color: #7e7e7e;
+}
+.article .info-article h4{
+  font-size: 12px;
+  line-height: 20px;
+  color: rgb(78, 75, 75);
+}
+}
+
+
 
 
 
