@@ -697,7 +697,7 @@ footer {
   Media Queries
   Main v2
   -------------------------------- */
-  @media screen and (max-width: 785px) {
+  @media screen and (max-width: 786px) {
     .welcome h1 {
       font-size: 40px;
       line-height: 60px;
@@ -710,7 +710,7 @@ footer {
   Media Queries
   Courses
   -------------------------------- */
-  @media screen and (max-width: 785px) {
+  @media screen and (max-width: 786px) {
     .curses {
       grid-template-columns: 1fr 1fr;
     }
@@ -738,7 +738,7 @@ footer {
 /* -------------------------------- 
  MiniInfo
   -------------------------------- */
-  @media screen and (max-width: 785px) {
+  @media screen and (max-width: 786px) {
     .mini-info {
       margin: auto;
       width: 90%;
