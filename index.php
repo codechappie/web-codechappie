@@ -7,15 +7,15 @@
 	<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
 	<!--Google fonts-->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,800" rel="stylesheet">
-
+	<!--Font Awesome-->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/reset.css" />
 	<!-- CSS reset -->
 	<link rel="stylesheet" href="css/style.css" />
 	<!-- Gem style -->
 	<script src="js/modernizr.js"></script>
 	<!-- Modernizr -->
-
-	<title>Code Chappie</title>
+	<title>Code Chappie - Un espacio para aprender Tecnología e informática</title>
 	<meta name="theme-color" content="#000" />
 	<meta name="msapplication-navbutton-color" content="#000" />
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -39,7 +39,7 @@
 			<li><a href="index.html">Inicio</a></li>
 			<li><a href="blog.html">Blog</a></li>
 			<li><a href="courses.html">Cursos</a></li>
-			<li><a href="#0">Recursos</a></li>
+			<li><a href="resources.html">Recursos</a></li>
 		</ul>
 
 	</nav>
@@ -51,49 +51,61 @@
 		</div>
 	</main>
 
-	<section>
-		<div class="container course-container withoutpadding">
+	<section class="course-section">
+		<div class="container course-container course-containerInicio withoutpadding">
 			<h3>Principales Cursos</h3>
 			<div class="curses">
-				<div class="curso">
+				<a href="#" class="curso">
 					<div class="card">
 						<img src="img/courses/minihtml5.jpg" alt="" />
 						<h4>HTML 5 desde Cero</h4>
+						<span><i class="far fa-eye icono"></i>100 vistas</span>
+						<p>Hypertext Markup Language is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets and scripting languages such as JavaScript.</p>
 					</div>
-				</div>
-				<div class="curso">
+				</a>
+				<a href="#" class="curso">
 					<div class="card">
 						<img src="img/courses/maxresdefault.jpg" alt="" />
 						<h4>HTML 5 desde Cero</h4>
+						<span><i class="far fa-eye icono"></i>100 vistas</span>
+						<p>Hypertext Markup Language is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets and scripting languages such as JavaScript.</p>
 					</div>
-				</div>
-				<div class="curso">
+				</a>
+				<a href="#" class="curso">
 					<div class="card">
 						<img src="img/courses/minicss3.jpg" alt="" />
 						<h4>HTML 5 desde Cero</h4>
+						<span><i class="far fa-eye icono"></i>100 vistas</span>
+						<p>Hypertext Markup Language is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets and scripting languages such as JavaScript.</p>
 					</div>
-				</div>
-				<div class="curso">
+				</a>
+				<a href="#" class="curso">
 					<div class="card">
 						<img src="img/courses/maxresdefault.jpg" alt="" />
 						<h4>HTML 5 desde Cero</h4>
+						<span><i class="far fa-eye icono"></i>100 vistas</span>
+						<p>Hypertext Markup Language is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets and scripting languages such as JavaScript.</p>
 					</div>
-				</div>
-				<div class="curso">
+				</a>
+				<a href="#" class="curso">
 					<div class="card">
 						<img src="img/courses/minicss3.jpg" alt="" />
 						<h4>HTML 5 desde Cero</h4>
+						<span><i class="far fa-eye icono"></i>100 vistas</span>
+						<p>Hypertext Markup Language is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets and scripting languages such as JavaScript.</p>
 					</div>
-				</div>
-				<div class="curso">
+				</a>
+				<a href="#" class="curso">
 					<div class="card">
 						<img src="img/courses/minihtml5.jpg" alt="" />
 						<h4>HTML 5 desde Cero</h4>
+						<span><i class="far fa-eye icono"></i>100 vistas</span>
+						<p>Hypertext Markup Language is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets and scripting languages such as JavaScript.</p>
 					</div>
-				</div>
+				</a>
 			</div>
 			<div class="btn-courses">
-				<button>Descubre más cursos</button>
+				<button><a href="courses.html" class="courses__btn">Descubre más cursos</a></button>
 			</div>
 		</div>
 	</section>
@@ -136,10 +148,11 @@
 			<a target="_blank" href="https://m.me/codechappie."><img src="img/icons/messenger.svg" alt=""></a>
 			<a target="_blank" href="https://instagram.com/codechappie/"><img src="img/icons/instagram.svg" alt=""></a>
 			<a target="_blank" href="https://youtube.com/codechappie/"><img src="img/icons/youtube.svg" alt=""></a>
-			<a target="_blank" href="https://github.com/codechappie/"><img src="img/icons/github.svg" alt=""></a target="_blank">
+			<a target="_blank" href="https://github.com/codechappie/"><img src="img/icons/github.svg" alt=""></a
+				target="_blank">
 		</div>
 		<div class="copyright">
-			<p>&copy; Code Chappie 2020. Todos los derechos reservados.</p>
+			<p>Copyright &copy; <a href="index.html" class="copyrightCode">Code Chappie</a> 2020. Todos los derechos reservados.</p>
 		</div>
 	</footer>
 
